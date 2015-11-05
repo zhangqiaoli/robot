@@ -1,0 +1,156 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="源文件">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="头文件">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hh;hpp;hxx;hm;inl;inc;xsd</Extensions>
+    </Filter>
+    <Filter Include="资源文件">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    </Filter>
+    <Filter Include="Common">
+      <UniqueIdentifier>{de657cd1-8337-48a6-aa77-b7ff951db6e6}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <Text Include="ReadMe.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="stdafx.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\git\CommonSA\SAAssistant.h">
+      <Filter>Common</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\git\CommonSA\SABoost.h">
+      <Filter>Common</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\git\CommonSA\SAContainer.h">
+      <Filter>Common</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\git\CommonSA\SADatabase.h">
+      <Filter>Common</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\git\CommonSA\SAHead.h">
+      <Filter>Common</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\git\CommonSA\SALogChannel.h">
+      <Filter>Common</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\git\CommonSA\SATCPSocket.h">
+      <Filter>Common</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\git\CommonSA\SAThreading.h">
+      <Filter>Common</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\git\CommonSA\SAThreadPool.h">
+      <Filter>Common</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\git\CommonSA\SATimer.h">
+      <Filter>Common</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\git\CommonSA\SAWebSocket.h">
+      <Filter>Common</Filter>
+    </ClInclude>
+    <ClInclude Include="RobotManager.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="RobotServer.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="Robot.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="WebSocketSession.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="SessionManager.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="RobotHttpServer.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\git\CommonSA\SAHTTPServer.h">
+      <Filter>Common</Filter>
+    </ClInclude>
+    <ClInclude Include="RobotCommon.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="TCPCommunication.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="JoyStickClient.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="stdafx.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\git\CommonSA\SAAssistant.cpp">
+      <Filter>Common</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\git\CommonSA\SAContainer.cpp">
+      <Filter>Common</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\git\CommonSA\SADatabase.cpp">
+      <Filter>Common</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\git\CommonSA\SAHead.cpp">
+      <Filter>Common</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\git\CommonSA\SALogChannel.cpp">
+      <Filter>Common</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\git\CommonSA\SATCPSocket.cpp">
+      <Filter>Common</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\git\CommonSA\SAThreading.cpp">
+      <Filter>Common</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\git\CommonSA\SAThreadPool.cpp">
+      <Filter>Common</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\git\CommonSA\SATimer.cpp">
+      <Filter>Common</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\git\CommonSA\SAWebSocket.cpp">
+      <Filter>Common</Filter>
+    </ClCompile>
+    <ClCompile Include="RobotManager.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="RobotServer.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="Robot.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="WebSocketSession.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="SessionManager.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="RobotHttpServer.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\git\CommonSA\SAHTTPServer.cpp">
+      <Filter>Common</Filter>
+    </ClCompile>
+    <ClCompile Include="RobotCommon.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="JoyStickClient.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="TCPCommunication.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+  </ItemGroup>
+</Project>
