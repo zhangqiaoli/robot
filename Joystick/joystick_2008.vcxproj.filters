@@ -1,0 +1,136 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{ac0ee6f9-75f2-4a17-a95c-0775d40d7fc5}</UniqueIdentifier>
+      <Extensions>cpp;c;cxx;rc;def;r;odl;idl;hpj;bat;for;f90</Extensions>
+    </Filter>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{4e18a31d-3f3a-41fd-9664-38c303951f8b}</UniqueIdentifier>
+      <Extensions>h;hpp;hxx;hm;inl;fi;fd</Extensions>
+    </Filter>
+    <Filter Include="Resource Files">
+      <UniqueIdentifier>{9c523d1e-3485-4b2b-9ca4-e1988ad2460e}</UniqueIdentifier>
+      <Extensions>ico;cur;bmp;dlg;rc2;rct;bin;cnt;rtf;gif;jpg;jpeg;jpe</Extensions>
+    </Filter>
+    <Filter Include="Common">
+      <UniqueIdentifier>{2fab3008-e5eb-49ca-970d-87f2d437bda8}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="Joystick.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\Common\PicaSoftAssistant.cpp">
+      <Filter>Common</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\Common\PicaSoftCommunication.cpp">
+      <Filter>Common</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\Common\PicaSoftLog.cpp">
+      <Filter>Common</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\Common\PicaSoftMemoryStream.cpp">
+      <Filter>Common</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\Common\PicaSoftMultiThread.cpp">
+      <Filter>Common</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\Common\PicaSoftObject.cpp">
+      <Filter>Common</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\Common\PicaSoftTCPSocket.cpp">
+      <Filter>Common</Filter>
+    </ClCompile>
+    <ClCompile Include="RobotAgentBase.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="RobotAgent.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="JoystickCommon.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="JoystickSimple.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\Common\PicaSoftINIFile.cpp">
+      <Filter>Common</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\Common\PicaSoftConfigure.cpp">
+      <Filter>Common</Filter>
+    </ClCompile>
+    <ClCompile Include="JoystickMaster.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="JoystickClient.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="Joystick.rc">
+      <Filter>Source Files</Filter>
+    </ResourceCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="resource.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="stdafx.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\Common\PicaSoftAssistant.h">
+      <Filter>Common</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\Common\PicaSoftBoost.h">
+      <Filter>Common</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\Common\PicaSoftCommunication.h">
+      <Filter>Common</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\Common\PicaSoftLog.h">
+      <Filter>Common</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\Common\PicaSoftMemoryStream.h">
+      <Filter>Common</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\Common\PicaSoftMultiThread.h">
+      <Filter>Common</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\Common\PicaSoftObject.h">
+      <Filter>Common</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\Common\PicaSoftTCPSocket.h">
+      <Filter>Common</Filter>
+    </ClInclude>
+    <ClInclude Include="RobotAgentBase.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="RobotAgent.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="JoystickCommon.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\Common\PicaSoftINIFile.h">
+      <Filter>Common</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\Common\PicaSoftConfigure.h">
+      <Filter>Common</Filter>
+    </ClInclude>
+    <ClInclude Include="JoystickMaster.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="JoystickClient.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <Image Include="..\..\DXUT\Optional\directx.ico">
+      <Filter>Resource Files</Filter>
+    </Image>
+  </ItemGroup>
+  <ItemGroup>
+    <Text Include="readme.txt" />
+  </ItemGroup>
+</Project>
