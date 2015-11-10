@@ -17,9 +17,72 @@ LPDIRECTINPUT8       g_pDI = NULL;
 LPDIRECTINPUTDEVICE8 g_pJoystick = NULL;
 HRESULT ReadBufferedData_js();
 void Process_DeviceStatus(LPDIJOYSTATE2 joystick);
+
+BOOL IsInstanceRuning()
+{
+	PICASOFT_DEBUG_TRACK;
+	//return g_bServiceRuning[m_nIndex];
+	TSTLString sMutexName;
+	sMutexName = _T("Global\\");
+	sMutexName += "robot_joystickmaster";
+	sMutexName += _T("_RUNING");
+
+	HANDLE hMutex = CreateMutex(NULL, FALSE, sMutexName.data());//Open??????
+
+	if (!hMutex || GetLastError() == ERROR_ALREADY_EXISTS)//已经运行了
+	{
+		if (hMutex)
+		{
+			ReleaseMutex(hMutex);
+			CloseHandle(hMutex);
+		}
+		return TRUE;
+	}
+	else return FALSE;
+}
+
+BOOL SetInstanceRuning(BOOL bRuning)
+{
+	PICASOFT_DEBUG_TRACK;
+	HANDLE hMutex = NULL;
+	if (bRuning != IsInstanceRuning())
+	{
+		//g_bServiceRuning[m_nIndex]=bRuning;
+		if (bRuning)
+		{
+			TSTLString sMutexName;
+			sMutexName = _T("Global\\");
+			sMutexName += "robot_joystickmaster";
+			sMutexName += _T("_RUNING");
+			hMutex = CreateMutex(NULL, FALSE, sMutexName.data());
+			if (!hMutex) return FALSE;
+		}
+		else
+		{
+			if (!hMutex) return FALSE;
+			if (hMutex)
+			{
+				ReleaseMutex(hMutex);
+				CloseHandle(hMutex);
+			}
+		}
+	}
+	return TRUE;
+}
+
 int main()
 {
 	JoystickMaster* client = JoystickMaster::instance();
+	if (IsInstanceRuning())
+	{
+		PLOG(ELL_INFORMATION, _T("Joystick has already run..."));
+		return 0;
+	}
+	else
+	{
+		SetInstanceRuning(TRUE);
+	}
+
 	PLOG(ELL_INFORMATION, _T("Joystick start..."));
 	client->ReloadSystemParameter();
 
