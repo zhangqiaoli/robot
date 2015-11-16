@@ -10,10 +10,13 @@ public:
 	~JoystickClient(void);
 	void SetJoystickStatus(LPCTSTR sDirect);
 	CString GetJoystickStatus();
+	int GetJoystickSpeed();
+	void SetJoystickSpeed(int nSpeed);
 public:
 	struct JoystickStatus
 	{
 		CString sDirect;
+		// 循环档位(1,2,3分别代表1,3,5档)
 		int speed;
 	};
 

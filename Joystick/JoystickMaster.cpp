@@ -74,9 +74,10 @@ UINT JoystickMaster::WrokProc(LPVOID)
 			m_evtChange.ResetEvent();
 			// 收到摇杆改变事件
 			CString sDirect = m_spJoystick->GetJoystickStatus();
+			int nSpeed = m_spJoystick->GetJoystickSpeed();
 			if (m_sLastDirect != sDirect || m_ullLastSendDirect + 1000 > ullNow)
 			{
-				m_tcpRobotAgent.SendMessage_Active(sDirect, g_Setting.nSpeed);
+				m_tcpRobotAgent.SendMessage_Active(sDirect, g_Setting.nSpeedInterval*nSpeed - 1);
 				m_sLastDirect = sDirect;
 				m_ullLastSendDirect = ullNow;
 			}
@@ -85,9 +86,10 @@ UINT JoystickMaster::WrokProc(LPVOID)
 		{
 			// 等待信号超时
 			CString sDirect = m_spJoystick->GetJoystickStatus();
+			int nSpeed = m_spJoystick->GetJoystickSpeed();
 			if (sDirect.GetLength() > 0 && sDirect != "stop")
 			{
-				m_tcpRobotAgent.SendMessage_Active(sDirect, g_Setting.nSpeed);
+				m_tcpRobotAgent.SendMessage_Active(sDirect, g_Setting.nSpeedInterval*nSpeed - 1);
 				m_sLastDirect = sDirect;
 				m_ullLastSendDirect = ullNow;
 			}
@@ -117,6 +119,6 @@ BOOL JoystickMaster::ReloadSystemParameter()
 	PICASOFT_SETTINGS_STR(ini, _T("ServerIP"), g_Setting.sServerIP);
 	PICASOFT_SETTINGS_STR(ini, _T("RobotID"), g_Setting.sRobotid);
 	PICASOFT_SETTINGS_INT(ini, _T("Port"), g_Setting.nPort);
-	PICASOFT_SETTINGS_INT(ini, _T("Speed"), g_Setting.nSpeed);
+	PICASOFT_SETTINGS_INT(ini, _T("SpeedInterval"), g_Setting.nSpeedInterval);
 	return TRUE;
 }

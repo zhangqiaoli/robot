@@ -17,12 +17,12 @@ typedef struct _tagSetting
 {
 	_tagSetting()
 	{
-		nSpeed = 3;
+		nSpeedInterval = 2;
 		nPort = 18020;
 	}
 	CString sServerIP;
 	CString sRobotid;
-	int nSpeed;
+	int nSpeedInterval;
 	int nPort;
 }SSetting;
 extern SSetting g_Setting;

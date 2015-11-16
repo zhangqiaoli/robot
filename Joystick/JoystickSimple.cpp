@@ -211,6 +211,10 @@ HRESULT ReadBufferedData_js()
 		{
 			TCHAR sz[128];
 			StringCchPrintf(sz, 128, TEXT("%02d "), i);
+			if (i == 3)
+			{
+				PLOG(ELL_DEBUG, "gears change");
+			}
 			StringCchCat(strText, 512, sz);
 		}
 	}
@@ -243,9 +247,21 @@ void Process_DeviceStatus(LPDIJOYSTATE2 joystick)
 	{
 		sOperation = "spin_left";
 	}
-
-	//g_JoystickStatus.sDirect = sOperation;
+	int speed = 0;
 	JoystickMaster* client = JoystickMaster::instance();
+	for (int i = 0; i < 128; i++)
+	{
+		if (joystick->rgbButtons[i] & 0x80)
+		{
+			if (i == 3)
+			{
+				speed = client->m_spJoystick->GetJoystickSpeed();
+				client->m_spJoystick->SetJoystickSpeed(speed % 3 + 1);
+				PLOG(ELL_DEBUG, "gears change,current gear %d change to %d", (speed - 1) % 3 + 1, speed % 3 + 1);
+			}
+		}
+	}
+	//g_JoystickStatus.sDirect = sOperation;
 	client->m_spJoystick->SetJoystickStatus(sOperation);
 	client->m_evtChange.SetEvent();
 	PLOG(ELL_DEBUG, "Process_DeviceStatus end");
